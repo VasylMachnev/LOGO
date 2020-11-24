@@ -1,0 +1,65 @@
+/* About Us */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.about__photo {
+  width: 50%;
+  height: 76.6rem;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.about__img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+
+  transform: translateY(-50%);
+}
+
+.about__experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 22rem;
+  height: 22rem;
+  padding-left: 3rem;
+  padding-right: 6rem;
+
+  font-size: 3rem;
+  font-weight: 400;
+  color: #FFF;
+
+  background-color: var(--main-yellow);
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.about__experience-number {
+  font-family: var(--heading-ff);
+  font-size: 7rem;
+  color: inherit;
+
+  transform: translateX(-20%);
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding: 0 8rem;
+}

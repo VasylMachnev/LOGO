@@ -1,0 +1,162 @@
+/* Intro */
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: #000;
+
+  position: relative;
+}
+
+.intro__slider {
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.intro__slider.slick-initialized {
+  display: block;
+  background-color: #000;
+}
+
+.intro__slider button.slick-prev,
+.intro__slider button.slick-next {
+  display: none !important;
+}
+
+.intro__slider .slick-list,
+.intro__slider .slick-track {
+  height: 100%;
+}
+
+.intro__slider-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.intro__slider-arrows {
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+}
+
+.intro__slider-btn {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0 4px;
+
+  font-size: 0;
+  color: transparent;
+  cursor: pointer;
+
+  background: none;
+}
+
+.intro__slider-btn:focus {
+  outline: none;
+}
+
+.intro__slider-btn--prev {
+  border: none;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #FFF transparent transparent;
+}
+
+.intro__slider-btn--next {
+  border-style: solid;
+  border-width: 1rem 0 1rem 1rem;
+  border-color: transparent transparent transparent #FFF;
+}
+
+.intro__inner {
+  width: 100%;
+  max-width: 78rem;
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 2;
+}
+
+.intro__title {
+  margin-bottom: 4rem;
+
+  font-family: var(--heading-ff);
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 1.3;
+  color: #FFF;
+}
+
+.intro__subtitle {
+  margin-bottom: 6rem;
+
+  font-size: 1.8rem;
+  color: #FFF;
+}
+
+
+/* Features */
+.features {
+  width: 100%;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+
+  -webkit-backdrop-filter: blur(26px);
+  backdrop-filter: blur(26px);
+  background-color: rgba(255, 255, 255, 0.1);
+
+}
+
+.features__inner {
+  width: 100%;
+  margin: 0 -2.5rem;
+  padding: 4rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.features__item {
+  width: 18%;
+  padding: 0 2.5rem;
+
+  position: relative;
+}
+
+.features__item-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #FFF;
+  line-height: 1.3;
+}
+
+.features__item-image {
+  opacity: .71;
+
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: -1;
+
+  transform: translateY(-50%);
+}

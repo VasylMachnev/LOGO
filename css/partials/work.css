@@ -1,0 +1,70 @@
+/* Work */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.timeline__item {
+  width: 13%;
+}
+
+.timeline__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 6.6rem;
+  height: 6.6rem;
+
+  border-radius: 50%;
+  border: 1px solid #FFF;
+
+  background-color: #000;
+
+  position: relative;
+}
+
+.timeline__circle:after {
+  content: '';
+  display: block;
+  width: 13.5rem;
+  height: 1px;
+
+  background-color: #FFF;
+
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  z-index: 0;
+
+  transform: translateY(-50%);
+}
+
+.timeline__item:last-child .timeline__circle:after {
+  content: '';
+  display: none;
+}
+
+.timeline__number {
+  display: inline-block;
+  font-family: var(--heading-ff);
+  font-size: 4rem;
+  font-weight: 400;
+  color: #FFF;
+}
+
+
+.timeline__description {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+
+  margin-top: 2rem;
+}
+
+.timeline__description-item {
+  width: 14%;
+  font-size: 1.4rem;
+  color: #FFF;
+}

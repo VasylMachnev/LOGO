@@ -1,0 +1,140 @@
+/* Header */
+.header {
+  width: 100%;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  transition: background .2s linear;
+}
+
+.header--dark {
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.header__contacts {
+  background-color: rgba(0, 0, 0, 0.31);
+}
+
+.header__contacts-link {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #FFF;
+  text-decoration: none;
+
+  position: relative;
+}
+
+.header__contacts-link:before {
+  content: '';
+  width: 100%;
+  height: 2px;
+
+  top: 100%;
+  left: 0;
+  position: absolute;
+
+  background-color: var(--main-yellow);
+
+  transition: transform .1s linear, color .1s linear;
+  transform: scaleX(0);
+}
+
+.header__contacts-link:hover:before {
+  transform: scaleX(1);
+}
+
+.header__contacts-link:hover {
+  color: var(--main-yellow);
+}
+
+.header__contacts-link:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.header__contacts-social {
+  display: flex;
+  align-items: center;
+}
+
+.header__contacts-social__link {
+  display: flex;
+  text-decoration: none;
+}
+
+.header__contacts-social__link:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.header__contacts-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem 0;
+}
+
+.header__inner {
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  font-size: 1.8rem;
+}
+
+.nav__link {
+  display: inline-block;
+
+  color: #FFF;
+  text-decoration: none;
+
+  transition: color .1s linear;
+
+  position: relative;
+}
+
+.nav__link:not(:last-child) {
+  margin-right: 8rem;
+}
+
+.nav__link:before {
+  content: '';
+  width: 100%;
+  height: 2px;
+
+  top: 100%;
+  left: 0;
+  position: absolute;
+
+  background-color: var(--main-yellow);
+
+  transition: transform .1s linear, color .1s linear;
+  transform: scaleX(0);
+}
+
+.nav__link:hover {
+  color: var(--main-yellow);
+}
+
+.nav__link:hover:before {
+  transform: scaleX(1);
+}
+
+.nav__link.active {
+  color: var(--main-yellow);
+}
+
+.nav__link.active:before {
+  transform: scaleX(1);
+}
